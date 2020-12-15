@@ -24,7 +24,7 @@ requirements:
 
 test:
   files:
-    - test.xlsx
+    - test.xls
 
 about:
   home: 'http://www.python-excel.org/'
