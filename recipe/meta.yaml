@@ -26,12 +26,12 @@ test:
     - test.xls
 
 about:
-  home: 'http://www.python-excel.org/'
+  home: 'https://www.python-excel.org/'
   license: "BSD-3-Clause AND BSD-4-Clause"
   license_family: BSD
   license_file: LICENSE
   summary: 'Library for developers to extract data from Microsoft Excel (tm) spreadsheet files'
-  doc_url: http://xlrd.readthedocs.io/en/latest/
+  doc_url: https://xlrd.readthedocs.io/en/latest/
   dev_url: https://github.com/python-excel/xlrd/
   description: |
     xlrd is a library for reading data and formatting information from Excel files,
