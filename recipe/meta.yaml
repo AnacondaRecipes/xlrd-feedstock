@@ -22,6 +22,12 @@ requirements:
     - python
 
 test:
+  imports:
+    - xlrd
+  requires:
+    - pip
+  commands:
+    - pip check
   files:
     - test.xls
 
