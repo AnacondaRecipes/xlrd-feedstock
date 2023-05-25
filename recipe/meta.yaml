@@ -10,34 +10,38 @@ source:
   sha256: f72f148f54442c6b056bf931dbc34f986fd0c3b0b6b5a58d013c9aef274d0c88
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 
 requirements:
   host:
     - python
     - pip
+    - wheel
   run:
     - python
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   files:
     - test.xls
 
 about:
-  home: 'http://www.python-excel.org/'
-  license: "BSD 3-Clause and BSD with advertising"
+  home: https://www.python-excel.org/
+  license: BSD-3-Clause AND BSD-Advertising-Acknowledgement
   license_family: BSD
   license_file: LICENSE
-  summary: 'Library for developers to extract data from Microsoft Excel (tm) spreadsheet files'
-  doc_url: http://xlrd.readthedocs.io/en/latest/
+  summary: Library for developers to extract data from Microsoft Excel (tm) spreadsheet files
+  doc_url: https://xlrd.readthedocs.io/en/latest/
   dev_url: https://github.com/python-excel/xlrd/
   description: |
     xlrd is a library for reading data and formatting information from Excel files,
     whether they are .xls or .xlsx files.
-  doc_source_url: https://github.com/python-excel/xlrd/blob/master/docs/index.rst
 
 extra:
   recipe-maintainers:
